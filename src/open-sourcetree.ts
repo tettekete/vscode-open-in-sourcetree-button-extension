@@ -2,10 +2,22 @@ import { exec } from 'child_process';
 import * as vscode from 'vscode';
 import { findWorkspaceFolder ,escapeArgumentForShell } from './lib/utils';
 import path from 'node:path';
+import fs from 'node:fs';
 
 const CONFIG_SOUCETREE_PATH = 'openSourcetreeButton.SourcetreePath';
 
-export function openSourcetree()
+function findSourcetreeOnWindows():string | undefined
+{
+	const DEFAULT_PATHS = [
+		'C:\\Program Files\\Atlassian\\SourceTree\\SourceTree.exe',
+		'C:\\Program Files (x86)\\Atlassian\\SourceTree\\SourceTree.exe',
+		path.join(process.env.USERPROFILE || '', 'AppData\\Local\\SourceTree\\SourceTree.exe'),
+	];
+
+	return DEFAULT_PATHS.find((path) => fs.existsSync(path) );
+}
+
+export async function openSourcetree()
 {
 	// Determine the folder to open
 	let folderToOpen:string | undefined = undefined;
@@ -62,7 +74,24 @@ export function openSourcetree()
 	{
 		if( isWindows )
 		{
-			sourcetreePath = `"C:\\Program Files (x86)\\Atlassian\\SourceTree\\SourceTree.exe"`;
+			const sourcetreeOnWindows:string | undefined = findSourcetreeOnWindows();
+			if( sourcetreeOnWindows )
+			{
+				sourcetreePath = sourcetreeOnWindows;
+
+				// update Sourcetree path config.
+				await vscode.workspace.getConfiguration().update(
+					CONFIG_SOUCETREE_PATH,
+					sourcetreePath,
+					vscode.ConfigurationTarget.Global
+				);
+			}
+			else
+			{
+				vscode.window.showErrorMessage(
+					vscode.l10n.t('SourceTree.exe was not found. Please set the config “Open Sourcetree Button: Sourcetree Path” to the full path of SourceTree.exe.' )
+				);
+			}
 		}
 		else
 		{

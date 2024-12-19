@@ -2,6 +2,7 @@
   "There is no active editor, and no other workspace folders could be found.": "There is no active editor, and no other workspace folders could be found.",
   "The specified path does not point to the Sourcetree application. For security reasons, only SourceTree.exe or SourceTree.app can be specified.\n\"{0}\"": "The specified path does not point to the Sourcetree application. For security reasons, only SourceTree.exe or SourceTree.app can be specified.\n\"{0}\"",
   "The active editor is not part of the workspace, and no other workspace folders could be found.": "The active editor is not part of the workspace, and no other workspace folders could be found.",
+  "SourceTree.exe was not found. Please set the config “Open Sourcetree Button: Sourcetree Path” to the full path of SourceTree.exe.": "SourceTree.exe was not found. Please set the config “Open Sourcetree Button: Sourcetree Path” to the full path of SourceTree.exe.",
   "Open SourceTree for the current workspace": "Open SourceTree for the current workspace",
   "Failed to open SourceTree: {0}": "Failed to open SourceTree: {0}"
 }
