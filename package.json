@@ -6,6 +6,11 @@
   "engines": {
     "vscode": "^1.96.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tettekete/vscode-open-in-sourcetree-button-extension"
+  },
+  "homepage": "https://github.com/tettekete/vscode-open-in-sourcetree-button-extension",
   "categories": [
     "Other"
   ],
