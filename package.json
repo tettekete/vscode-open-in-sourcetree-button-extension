@@ -1,7 +1,7 @@
 {
   "name": "open-in-sourcetree-button",
-  "displayName": "Open In SourceTree Button",
-  "description": "Adds a button in VSCode to open SourceTree.",
+  "displayName": "Open In Sourcetree Button",
+  "description": "Adds a button to the VSCode status bar to open SourceTree.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.96.0"
@@ -9,15 +9,41 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "license": "MIT",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "openinsourcetreebutton.helloWorld",
-        "title": "Hello World"
+        "command": "tettekete.openSourcetreeButton",
+        "title": "Open In SourceTree Button: open SourceTree"
       }
-    ]
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Open In Sourcetree Button",
+      "properties": {
+        "openSourcetreeButton.priority": {
+          "type": "integer",
+          "description": "The priority given to the statusbar button",
+          "default": 0
+        },
+        "openSourcetreeButton.SourcetreePath": {
+          "type": "string",
+          "title": "Sourcetree path",
+          "description": "Path to the Sourcetree executable (configure this if it doesn’t work by default).",
+          "default": ""
+        },
+        "openSourcetreeButton.icon": {
+          "title": "Codeicon",
+          "type": "string",
+          "default": "light-bulb",
+          "description": "The Codicon icon to use for the status bar item. See https://code.visualstudio.com/api/references/icons-in-labels#icon-listing for available icons."
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
@@ -31,17 +57,20 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.96.0",
     "@types/mocha": "^10.0.9",
     "@types/node": "20.x",
+    "@types/vscode": "^1.96.0",
     "@typescript-eslint/eslint-plugin": "^8.10.0",
     "@typescript-eslint/parser": "^8.7.0",
-    "eslint": "^9.13.0",
-    "typescript": "^5.6.3",
-    "ts-loader": "^9.5.1",
-    "webpack": "^5.95.0",
-    "webpack-cli": "^5.1.4",
     "@vscode/test-cli": "^0.0.10",
-    "@vscode/test-electron": "^2.4.1"
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.13.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.6.3",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@vscode/l10n": "^0.0.18"
   }
 }
