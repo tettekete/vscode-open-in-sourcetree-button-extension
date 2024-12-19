@@ -1,6 +1,7 @@
 import { exec } from 'child_process';
 import * as vscode from 'vscode';
 import { findWorkspaceFolder ,escapeArgumentForShell } from './lib/utils'
+import path from 'node:path';
 
 const CONFIG_SOUCETREE_PATH = 'openSourcetreeButton.SourcetreePath';
 
@@ -48,6 +49,13 @@ export function openSourcetree()
 	
 	if( sourcetreePath.length )
 	{
+		if( ! /^sourcetree\.(?:exe)|(?:app)$/i.test( path.basename( sourcetreePath )) )
+		{
+			vscode.window.showErrorMessage(
+				vscode.l10n.t('The specified path does not point to the Sourcetree application. For security reasons, only SourceTree.exe or SourceTree.app can be specified.\n"{0}"',sourcetreePath )
+			);
+			return;
+		}
 		sourcetreePath = escapeArgumentForShell( sourcetreePath );
 	}
 	else
