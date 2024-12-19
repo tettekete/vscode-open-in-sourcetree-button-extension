@@ -1,6 +1,6 @@
 import { exec } from 'child_process';
 import * as vscode from 'vscode';
-import { findWorkspaceFolder ,escapeArgumentForShell } from './lib/utils'
+import { findWorkspaceFolder ,escapeArgumentForShell } from './lib/utils';
 import path from 'node:path';
 
 const CONFIG_SOUCETREE_PATH = 'openSourcetreeButton.SourcetreePath';
