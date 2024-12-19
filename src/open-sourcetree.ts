@@ -4,7 +4,7 @@ import { findWorkspaceFolder ,escapeArgumentForShell } from './lib/utils';
 import path from 'node:path';
 import fs from 'node:fs';
 
-const CONFIG_SOUCETREE_PATH = 'openSourcetreeButton.SourcetreePath';
+import { CONFIG_SOURCETREE_PATH } from './constants';
 
 function findSourcetreeOnWindows():string | undefined
 {
@@ -56,7 +56,7 @@ export async function openSourcetree()
 
 	// Determine the path to Sourcetree.
 	const config		= vscode.workspace.getConfiguration();
-	let sourcetreePath	= config.get<string>(CONFIG_SOUCETREE_PATH, '');
+	let sourcetreePath	= config.get<string>(CONFIG_SOURCETREE_PATH, '');
 	const isWindows		= process.platform === 'win32';
 	
 	if( sourcetreePath.length )
@@ -81,7 +81,7 @@ export async function openSourcetree()
 
 				// update Sourcetree path config.
 				await vscode.workspace.getConfiguration().update(
-					CONFIG_SOUCETREE_PATH,
+					CONFIG_SOURCETREE_PATH,
 					sourcetreePath,
 					vscode.ConfigurationTarget.Global
 				);

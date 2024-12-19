@@ -1,8 +1,11 @@
 import * as vscode from 'vscode';
 import { openSourcetree } from './open-sourcetree';
 
-const CODICON_SETTING_KEY	= 'openSourcetreeButton.icon';
-const PRIORITY_SETTING_KEY	= 'openSourcetreeButton.priority';
+import {
+	CONFIG_SOURCETREE_PATH,
+	CODEICON_SETTING_KEY,
+	PRIORITY_SETTING_KEY
+} from './constants';
 
 let statusBarItem: vscode.StatusBarItem;
 
@@ -13,7 +16,7 @@ export function activate(context: vscode.ExtensionContext)
 	// Event listener fot config change.
 	const configChangeListener = vscode.workspace.onDidChangeConfiguration((event) =>
 	{
-		if (event.affectsConfiguration( CODICON_SETTING_KEY ))
+		if (event.affectsConfiguration( CODEICON_SETTING_KEY ))
 		{
 			updateStatusBarIcon();
 		}
@@ -32,7 +35,7 @@ function updateStatusBarIcon()
 	}
 
 	const config		= vscode.workspace.getConfiguration();
-	const customIcon	= config.get<string>(CODICON_SETTING_KEY, 'light-bulb');	// See https://code.visualstudio.com/api/references/icons-in-labels#icon-listing 
+	const customIcon	= config.get<string>(CODEICON_SETTING_KEY, 'light-bulb');	// See https://code.visualstudio.com/api/references/icons-in-labels#icon-listing 
 	const priority		= config.get<number>(PRIORITY_SETTING_KEY, 0);
 
 	statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right ,priority);
