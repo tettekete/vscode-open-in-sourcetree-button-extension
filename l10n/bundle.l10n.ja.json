@@ -1,0 +1,7 @@
+{
+  "There is no active editor, and no other workspace folders could be found.": "アクティブエディターが存在せず、また他のワークスペースフォルダも見つかりませんでした。",
+  "The specified path does not point to the Sourcetree application. For security reasons, only SourceTree.exe or SourceTree.app can be specified.\n\"{0}\"": "指定されたパスは soucetree アプリケーションを指してきません。安全性のため SouceTree.exe|app のみ指定可能です。\n\"{0}\"",
+  "The active editor is not part of the workspace, and no other workspace folders could be found.": "アクティブエディターはワークスペースに含まれておらず、また他のワークスペースフォルダも見つかりませんでした。",
+  "Open SourceTree for the current workspace": "現在のワークスペースを Sourcetree で開く",
+  "Failed to open SourceTree: {0}": "SourceTree を開くのに失敗しました。: {0}"
+}

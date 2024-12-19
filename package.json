@@ -18,7 +18,7 @@
     "commands": [
       {
         "command": "tettekete.openSourcetreeButton",
-        "title": "Open In SourceTree Button: open SourceTree"
+        "title": "%commands.tettekete.openSourcetreeButton%"
       }
     ],
     "configuration": {
@@ -27,24 +27,25 @@
       "properties": {
         "openSourcetreeButton.priority": {
           "type": "integer",
-          "description": "The priority given to the statusbar button",
+          "description": "%configuration.openSourcetreeButton.priority%",
           "default": 0
         },
         "openSourcetreeButton.SourcetreePath": {
           "type": "string",
           "title": "Sourcetree path",
-          "description": "Path to the Sourcetree executable (configure this if it doesn’t work by default).",
+          "description": "%configuration.openSourcetreeButton.SourcetreePath%",
           "default": ""
         },
         "openSourcetreeButton.icon": {
           "title": "Codeicon",
           "type": "string",
           "default": "light-bulb",
-          "description": "The Codicon icon to use for the status bar item. See https://code.visualstudio.com/api/references/icons-in-labels#icon-listing for available icons."
+          "description": "%configuration.openSourcetreeButton.icon%"
         }
       }
     }
   },
+  "l10n": "./l10n",
   "scripts": {
     "vscode:prepublish": "npm run package",
     "compile": "webpack",

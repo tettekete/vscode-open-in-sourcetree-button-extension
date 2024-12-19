@@ -1,0 +1,6 @@
+{
+	"configuration.openSourcetreeButton.priority": "ステータスバー上の並び順を決定するためのプライオリティー値です。",
+	"configuration.openSourcetreeButton.SourcetreePath": "Soucetree がうまく開かない場合、Sourcetree のパスを設定してください。",
+	"configuration.openSourcetreeButton.icon": "ステータスバー上のアイコン(Codeicon)を指定出来ます。指定出来るアイコン名は https://code.visualstudio.com/api/references/icons-in-labels#icon-listing を参照してください。",
+	"commands.tettekete.openSourcetreeButton": "Open In SourceTree Button: SourceTree で開く"
+}
