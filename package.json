@@ -2,7 +2,7 @@
   "name": "open-in-sourcetree-button",
   "displayName": "Open In Sourcetree Button",
   "description": "Adds a button to the VSCode status bar to open SourceTree.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.96.0"
   },
