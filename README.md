@@ -14,10 +14,15 @@ Sourcetree must be installed.
 
 If left blank, the default Sourcetree installation path will be used:
 
-- Windows: `C:\Program Files (x86)\Atlassian\SourceTree\SourceTree.exe`
-- macOS: `Sourcetree.app`
+- Windows(One of the following): 
+	- `C:\Program Files (x86)\Atlassian\SourceTree\SourceTree.exe`
+	- `C:\Program Files\Atlassian\SourceTree\SourceTree.exe`
+	- `<User-Home>\AppData\Local\SourceTree\SourceTree.exe`
+- macOS: `Sourcetree.app`_(On a Mac, it is not usually necessary to use the full path.)_
 
-If Sourcetree is installed in a different location or under a different name and fails to launch, specify the path to the Sourcetree application in this configuration.
+If Sourcetree is installed in a different location and cannot be launched, specify the full path to the Sourcetree application in this setting.
+
+You can also configure it using the file selection dialog by selecting `Open In SourceTree Button: Set the SourceTree path in the file selection dialog.` from the command palette.
 
 NOTE: For security reasons, the file name must be `SourceTree.exe` or `Sourcetree.app`.
 
@@ -31,3 +36,8 @@ By default, the `light-bulb` icon, which resembles the Sourcetree logo, is set.
 **Priority** (`openSourcetreeButton.priority`)
 
 This determines the priority value for the order of icons in the status bar.
+
+
+# Appendix
+
+- [日本語版 README](docs/README.ja.md)

@@ -16,10 +16,15 @@ Sourcetree がインストールされている必要があります
 
 空白時はデフォルトで以下の場所にある Sourcetree が使用されます。
 
-- Windows: `C:\Program Files (x86)\Atlassian\SourceTree\SourceTree.exe`
-- macOS: `Sourcetree.app`
+- Windows（以下のいずれか）:
+	- `C:\Program Files (x86)\Atlassian\SourceTree\SourceTree.exe`
+	- `C:\Program Files\Atlassian\SourceTree\SourceTree.exe`
+	- `<User-Home>\AppData\Local\SourceTree\SourceTree.exe`
+- macOS: `Sourcetree.app`_(mac では通常フルパスである必要はありません)_
 
-異なる場所や名前にインストールしており、上手く起動出来無い場合このコンフィグに Soucetree アプリケーションのパスを指定してください。
+Sourcetree が別の場所にインストールされており起動できない場合、この設定で Sourcetree アプリケーションへのフルパスを指定して下さい。
+
+コマンドパレットから `Open In SourceTree Button: SourceTree のパスをファイル選択ダイアログで設定する` を選んでファイル選択ダイアログから設定することも出来ます。
 
 _注：セキュリティ上の理由によりファイル名は SourceTree.exe か Sourcetree.app でなければなりません。_
 
