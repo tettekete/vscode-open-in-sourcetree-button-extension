@@ -1,4 +1,4 @@
-<p align="center">English / <a href="docs/README.ja.md">日本語</a></p>
+<p align="center">English / <a href="https://github.com/tettekete/vscode-open-in-sourcetree-button-extension/blob/main/docs/README.ja.md">日本語</a></p>
 
 # Open In Sourcetree Button
 
