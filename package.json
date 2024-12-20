@@ -6,6 +6,7 @@
   "engines": {
     "vscode": "^1.96.0"
   },
+  "icon": "docs/images/open-In-sourcetree-button.png",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tettekete/vscode-open-in-sourcetree-button-extension"
