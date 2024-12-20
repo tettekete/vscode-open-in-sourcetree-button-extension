@@ -9,7 +9,7 @@
   "icon": "docs/images/open-In-sourcetree-button.png",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tettekete/vscode-open-in-sourcetree-button-extension"
+    "url": "https://github.com/tettekete/vscode-open-in-sourcetree-button-extension"
   },
   "homepage": "https://github.com/tettekete/vscode-open-in-sourcetree-button-extension",
   "categories": [
