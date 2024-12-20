@@ -24,6 +24,10 @@
       {
         "command": "tettekete.openSourcetreeButton",
         "title": "%commands.tettekete.openSourcetreeButton%"
+      },
+      {
+        "command": "tettekete.setSourceTreePath",
+        "title": "%commands.tettekete.setSourceTreePath%"
       }
     ],
     "configuration": {
