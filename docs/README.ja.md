@@ -48,6 +48,6 @@ _注：セキュリティ上の理由によりファイル名は SourceTree.exe 
 
 ## ショートカットの設定方法
 
-1 .「キーボードショートカット」( Win:`ctrl` + `k`,`ctrl` + `s` / mac:`cmd`+`k`,`cmd`+`s`)を開く
+1. 「キーボードショートカット」( Win:`ctrl` + `k`,`ctrl` + `s` / mac:`cmd`+`k`,`cmd`+`s`)を開く
 2. `tettekete.openSourcetreeButton` あるいは「Open In SourceTree Button: SourceTree で開く」を検索して選択する
 3. キーバインドを設定する
